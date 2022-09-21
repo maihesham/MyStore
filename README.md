@@ -8,7 +8,7 @@
 
 #run "npm install" then "ng serve"
 
-#use angular cli , bootstrap
+#use angular cli , bootstrap , primeng
 
 #data from json file 
 
