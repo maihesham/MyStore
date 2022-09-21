@@ -1,0 +1,29 @@
+<div class="card" style="width: 25rem;">
+      <img [src]="product.url" class="card-img-top" [routerLink]="['/product-details', product.id]">
+      <div class="card-body">
+        <div class="card-data">
+            <h3>{{product.name}}</h3>  
+            <p>
+              {{product.description}}
+            </p>
+            <span>{{currentCurrency}}{{product.price}}</span>
+            
+        </div>
+        <div class="card-Actions">
+          <div class="row">
+            <div class="col">
+              <select class="form-select" [(ngModel)]="quatity">
+                <option  *ngFor="let i of quantities" value="{{i}}">{{i}}</option>
+              </select>
+              
+            </div>
+            <div class="col">
+             
+              <a  class="btn btn-primary"(click)="addProductToCart()">{{addToCart}}</a>
+            </div>
+          </div>
+        </div>
+                  
+              
+      </div>
+</div>

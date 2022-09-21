@@ -1,0 +1,17 @@
+.error{
+    color: red;
+}
+.form-group{
+    margin-top: 5%;
+}
+.card{
+    border: none;
+}
+.remove{
+    position: relative;
+    left: 406px;
+    top: 34px;
+    z-index: 99;
+    border-radius: 50%;
+
+}
