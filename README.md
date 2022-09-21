@@ -1,9 +1,17 @@
 #MyStore Project
+
+
 #For Fwd scholarship 
+
+
 #cross-skilling-angular
+
 #run "npm install" then "ng serve"
+
 #use angular cli , bootstrap
+
 #data from json file 
+
 #project details
    1-home page to display all products
    2-if click on product => redirect to product details
