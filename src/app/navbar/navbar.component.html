@@ -1,7 +1,9 @@
 <nav class="navbar navbar navbar-dark bg-primary sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/product-list">{{myStore}}</a>
-      <a class="navbar-brand" routerLink="/cart-list"> {{totalPrice}} {{currentCurrency}} {{numberOfItemsInCart}} {{cartList}}</a>
+      <a class="navbar-brand" routerLink="/product-list"><i class="pi pi-pi-list"></i>{{myStore}}</a>
+      <a class="navbar-brand"> <i class="pi pi-wallet"></i>{{totalPrice}}{{currentCurrency}}</a>
+        <a class="navbar-brand" routerLink="/cart-list">
+          {{numberOfItemsInCart}} <i class="pi pi-shopping-cart" style="font-size: 2rem"></i>{{cartList}}</a>
       
     </div>
   </nav>

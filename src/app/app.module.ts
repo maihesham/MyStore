@@ -11,6 +11,11 @@ import { CartComponent } from './cart/cart.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { MessagesComponent } from './messages/messages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ButtonModule} from 'primeng/button';
+import {ToastModule} from 'primeng/toast';
+import {RippleModule} from 'primeng/ripple';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +32,11 @@ import { MessagesComponent } from './messages/messages.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ToastModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    RippleModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
