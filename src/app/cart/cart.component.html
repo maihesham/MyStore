@@ -31,7 +31,7 @@
                 <div class="row">
                   <div class="col-5">
                     <input type="number"
-                       class="form-control" 
+                       class="form-control"
                        (ngModelChange)="item.amount = $event" 
                        (ngModelChange)="itemChanged($event,item)"
                        [(ngModel)]="item.amount">
@@ -57,13 +57,17 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label" for="name">Name</label>
             <div class="col-sm-10">
-              <input type="text" required minlength="3"  placeholder="minimun 3 chars" class="form-control" id="name" required [(ngModel)]="user.name" name="name" #name="ngModel">
+              <input type="text" required minlength="3" pattern="^[a-zA-Z \-\']+" placeholder="minimun 3 chars" class="form-control" id="name" required [(ngModel)]="user.name" name="name" #name="ngModel">
               <div class="error" *ngIf="name.errors?.['required']&&name.touched">
                 Name is required.
               </div>
               <div  class="error" *ngIf="name.errors?.['minlength']&&name.touched">
                 Name must be at least 3 characters long.
               </div>
+              <div  class="error" *ngIf="name.errors?.['pattern']&&name.touched">
+                Name must be characters only.
+              </div>
+              
             </div>
             
           </div>
@@ -72,7 +76,7 @@
                 <label class="col-sm-2 col-form-label" for="address">address</label>
                 <div class="col-sm-10">
                   <input type="text" required minlength="6" placeholder="minimun 6 chars" class="form-control" id="address" required [(ngModel)]="user.address" 
-                    name="address" #address="ngModel">
+                    name="address"   #address="ngModel">
                     <div  class="error" *ngIf="address.errors?.['required']&&address.touched">
                       address is required.
                     </div>
@@ -99,9 +103,12 @@
                   <div class="error"  *ngIf="creditCard.errors?.['minlength']&&creditCard.touched">
                     creditCard must be  16 digit long.
                   </div>
+                  <div  class="error" *ngIf="creditCard.errors?.['pattern']&&name.touched">
+                    Credit Card must be numbers.
+                  </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-success" [disabled]="!UserForm.form.valid">Submit</button>
+              <button type="submit" [disabled]="!UserForm.form.valid" class="btn btn-success" >Submit</button>
         </form>
 
     </div>
